@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.22">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{6701D0ED-B39A-4724-9829-9CC8E186000B}" Target64Bit="true" ShowHideConfigurations="#x306">
+		<System>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{1D6948B7-2490-455D-A328-28435AB8FA30}" Name="GattPLC" PrjFilePath="GattPLC\GattPLC.plcproj" TmcFilePath="GattPLC\GattPLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+					<Name>GattPLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment>
+								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+							</Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>PRG_DIAGNOSTIC.simHeartbeat</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_FEES_GATT_GPI_111.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_121.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_131.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VGP_80.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VGP_80.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xDecel</Name>
+							<Comment>
+								<![CDATA[Link to brake input]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xAccel</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xRotate</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xNCFault</Name>
+							<Comment>
+								<![CDATA[ remove?]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xAtSpd</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_iRawSpeed</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_xAlarm</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_iTempMon</Name>
+							<Comment>
+								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.i_iCurrentMon</Name>
+							<Comment>
+								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_10.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_10.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_20.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_20.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_30.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_30.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_40.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_40.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_50.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_50.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_60.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_60.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_90.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_90.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_100.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_100.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_110.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_110.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_120.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_120.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_130.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_130.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_140.i_xOpnLS</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_140.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_20.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_11.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_40.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_61.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_80.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_100.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_110.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_120.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_130.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_140.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_10.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_20.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_30.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_40.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_50.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_60.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_80.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_90.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_100.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_110.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_120.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_130.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_140.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ Controls and I/Os]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.i_xMPStatus</Name>
+							<Comment>
+								<![CDATA[MP status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.i_xBPStatus</Name>
+							<Comment>
+								<![CDATA[BP status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.i_xWarning</Name>
+							<Comment>
+								<![CDATA[Warning status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.i_xAlarm</Name>
+							<Comment>
+								<![CDATA[Alarm, maps to error]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.i_xRemote</Name>
+							<Comment>
+								<![CDATA[Remote control status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.i_xMPStatus</Name>
+							<Comment>
+								<![CDATA[MP status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.i_xBPStatus</Name>
+							<Comment>
+								<![CDATA[BP status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.i_xWarning</Name>
+							<Comment>
+								<![CDATA[Warning status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.i_xAlarm</Name>
+							<Comment>
+								<![CDATA[Alarm, maps to error]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.i_xRemote</Name>
+							<Comment>
+								<![CDATA[Remote control status]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VGP_80.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_10.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_20.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_30.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_110.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_130.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_xStart</Name>
+							<Comment>
+								<![CDATA[ link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_xStop</Name>
+							<Comment>
+								<![CDATA[Link to output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_xReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_xProtection</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_xSetSpeed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_140.q_iSpeedSet</Name>
+							<Comment>
+								<![CDATA[Link to analog Output]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_10.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_20.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_30.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_40.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_50.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_60.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_90.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_100.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_110.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_120.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_130.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VRC_140.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_10.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_20.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_30.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_40.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_50.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_60.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_80.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_90.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_100.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_110.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_120.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_130.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GCC_140.q_xHV_DIS</Name>
+							<Comment>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.q_xMPStart</Name>
+							<Comment>
+								<![CDATA[Main Pump start]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_01.q_xBPStart</Name>
+							<Comment>
+								<![CDATA[ Booster Pump start (this can be started by the pump automatically)]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.q_xMPStart</Name>
+							<Comment>
+								<![CDATA[Main Pump start]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_PFM_60.q_xBPStart</Name>
+							<Comment>
+								<![CDATA[ Booster Pump start (this can be started by the pump automatically)]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.fb_AT1K0_GAS_VVC_70.q_xOPN_DO</Name>
+							<Comment>
+								<![CDATA[IO]]>
+							</Comment>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

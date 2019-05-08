@@ -1,0 +1,17 @@
+VAR
+
+   fbTime : FB_LocalSystemTime := ( bEnable := TRUE, dwCycle := 1 );
+   logTimer : TON := ( IN := TRUE, PT := T#1000ms );
+
+   plcName : STRING[15];
+
+   {attribute 'pytmc' := ' pv: simHeartbeat '}
+   simHeartbeat AT %I* : UINT := 0;
+   {attribute 'pytmc' := ' pv: plcHeartbeat '}
+   plcHeartbeat : UDINT := 0;
+   {attribute 'pytmc' := ' pv: plcInfo '}
+   plcInfo : STRING[40];
+   {attribute 'pytmc' := ' pv: plcLocalTime '}
+   plcLocalTime : STRING[25];
+
+END_VAR

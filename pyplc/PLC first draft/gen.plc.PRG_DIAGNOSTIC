@@ -1,0 +1,16 @@
+plcHeartbeat := plcHeartbeat + 1;
+IF plcHeartbeat > 4294967000
+   THEN plcHeartbeat := 0;
+END_IF
+
+// get timestamp as string every second
+fbTime();
+logTimer( IN := fbTime.bValid );
+IF logTimer.Q THEN
+   logTimer( IN := FALSE ); logTimer( IN := fbTime.bValid );
+   plcLocalTime := SYSTEMTIME_TO_STRING(fbTime.systemTime);
+END_IF
+
+// make an info string
+plcName := 'Prototype PLC: ';
+plcInfo := CONCAT(plcName, plcLocalTime);

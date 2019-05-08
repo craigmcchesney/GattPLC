@@ -1,0 +1,80 @@
+
+// MKS275 Gauges
+
+fb_FEES_GATT_GPI_111(PG=>);
+fb_AT1K0_GAS_GPI_121(PG=>);
+fb_AT1K0_GAS_GPI_131(PG=>);
+
+// VGC Valves
+
+fb_AT1K0_GAS_VGP_80(i_stUSG := fb_AT1K0_GAS_GCC_60.IG, i_stDSG := fb_AT1K0_GAS_GCC_80.IG, i_xDis_DPIlk := FALSE, i_xEPS_OK := TRUE, i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+
+// FB_PTM_Ebara_010M
+
+fb_AT1K0_GAS_PTM_10(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_20(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_30(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_40(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_80(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_110(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_120(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_130(i_xExtILKOk := TRUE);
+fb_AT1K0_GAS_PTM_140(i_xExtILKOk := TRUE);
+
+// FB_VRC
+
+fb_AT1K0_GAS_VRC_10(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_20(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_30(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_40(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_50(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_60(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_90(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_100(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_110(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_120(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_130(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+fb_AT1K0_GAS_VRC_140(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
+
+// FB_MKS317
+
+fb_AT1K0_GAS_GPI_10(PG=>);
+fb_AT1K0_GAS_GPI_20(PG=>);
+fb_AT1K0_GAS_GPI_11(PG=>);
+fb_AT1K0_GAS_GPI_30(PG=>);
+fb_AT1K0_GAS_GPI_40(PG=>);
+fb_AT1K0_GAS_GPI_50(PG=>);
+fb_AT1K0_GAS_GPI_60(PG=>);
+fb_AT1K0_GAS_GPI_61(PG=>);
+fb_AT1K0_GAS_GPI_80(PG=>);
+fb_AT1K0_GAS_GPI_90(PG=>);
+fb_AT1K0_GAS_GPI_100(PG=>);
+fb_AT1K0_GAS_GPI_110(PG=>);
+fb_AT1K0_GAS_GPI_120(PG=>);
+fb_AT1K0_GAS_GPI_130(PG=>);
+fb_AT1K0_GAS_GPI_140(PG=>);
+
+// FB_MKS422
+
+fb_AT1K0_GAS_GCC_10(PG := fb_AT1K0_GAS_GPI_10.PG);
+fb_AT1K0_GAS_GCC_20(PG := fb_AT1K0_GAS_GPI_20.PG);
+fb_AT1K0_GAS_GCC_30(PG := fb_AT1K0_GAS_GPI_30.PG);
+fb_AT1K0_GAS_GCC_40(PG := fb_AT1K0_GAS_GPI_40.PG);
+fb_AT1K0_GAS_GCC_50(PG := fb_AT1K0_GAS_GPI_50.PG);
+fb_AT1K0_GAS_GCC_60(PG := fb_AT1K0_GAS_GPI_60.PG);
+fb_AT1K0_GAS_GCC_80(PG := fb_AT1K0_GAS_GPI_80.PG);
+fb_AT1K0_GAS_GCC_90(PG := fb_AT1K0_GAS_GPI_90.PG);
+fb_AT1K0_GAS_GCC_100(PG := fb_AT1K0_GAS_GPI_100.PG);
+fb_AT1K0_GAS_GCC_110(PG := fb_AT1K0_GAS_GPI_110.PG);
+fb_AT1K0_GAS_GCC_120(PG := fb_AT1K0_GAS_GPI_120.PG);
+fb_AT1K0_GAS_GCC_130(PG := fb_AT1K0_GAS_GPI_130.PG);
+fb_AT1K0_GAS_GCC_140(PG := fb_AT1K0_GAS_GPI_140.PG);
+
+// FB_EbaraDryPump
+
+fb_AT1K0_GAS_PFM_01(i_stBPGauge := fb_AT1K0_GAS_GPI_11.PG, i_xVlvOpn := TRUE, i_xExtIlkOK := TRUE);
+fb_AT1K0_GAS_PFM_60(i_stBPGauge := fb_AT1K0_GAS_GPI_61.PG, i_xVlvOpn := TRUE, i_xExtIlkOK := TRUE);
+
+// FB_VCC
+
+fb_AT1K0_GAS_VVC_70(i_xExtILK_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);

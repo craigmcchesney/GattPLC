@@ -1,0 +1,5 @@
+VAR_GLOBAL
+
+xSystemOverrideMode : BOOL; (* Global system override for the prototype section*)
+
+END_VAR
