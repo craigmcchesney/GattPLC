@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
-  <POU Name="PRG_DIAGNOSTIC" Id="{9edf8c82-46b6-4264-ba3d-d2a63de5444e}" SpecialFunc="None">
+  <POU Name="PRG_DIAGNOSTIC" Id="{8043d4fd-4180-4ba2-9bc9-288633f49a20}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_DIAGNOSTIC
 VAR
 

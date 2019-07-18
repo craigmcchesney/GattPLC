@@ -6,139 +6,132 @@
 
 // MKS275 Gauges
 
-{attribute 'pytmc' := ' pv: fb_FEES_GATT_GPI_111 '}
+{attribute 'pytmc' := ' pv: FEES:GATT:GPI:111 '}
 fb_FEES_GATT_GPI_111 : FB_MKS275;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_121 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:121 '}
 fb_AT1K0_GAS_GPI_121 : FB_MKS275;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_131 '}
-fb_AT1K0_GAS_GPI_131 : FB_MKS275;
-
-// VGC Valves
-
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VGP_80 '}
-fb_AT1K0_GAS_VGP_80 : FB_VGC;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:141 '}
+fb_AT1K0_GAS_GPI_141 : FB_MKS275;
 
 // FB_PTM_Ebara_010M
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_10 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:10 '}
 fb_AT1K0_GAS_PTM_10 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_20 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:20 '}
 fb_AT1K0_GAS_PTM_20 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_30 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:30 '}
 fb_AT1K0_GAS_PTM_30 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_40 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:40 '}
 fb_AT1K0_GAS_PTM_40 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_80 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:80 '}
 fb_AT1K0_GAS_PTM_80 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_110 '}
-fb_AT1K0_GAS_PTM_110 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_120 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:120 '}
 fb_AT1K0_GAS_PTM_120 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_130 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:130 '}
 fb_AT1K0_GAS_PTM_130 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PTM_140 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:140 '}
 fb_AT1K0_GAS_PTM_140 : FB_PTM_Ebara_010M;
 
 // FB_VRC
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_10 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:10 '}
 fb_AT1K0_GAS_VRC_10 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_20 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:20 '}
 fb_AT1K0_GAS_VRC_20 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_30 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:30 '}
 fb_AT1K0_GAS_VRC_30 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_40 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:40 '}
 fb_AT1K0_GAS_VRC_40 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_50 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:50 '}
 fb_AT1K0_GAS_VRC_50 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_60 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:60 '}
 fb_AT1K0_GAS_VRC_60 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_90 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:90 '}
 fb_AT1K0_GAS_VRC_90 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_100 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:100 '}
 fb_AT1K0_GAS_VRC_100 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_110 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:110 '}
 fb_AT1K0_GAS_VRC_110 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_120 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:120 '}
 fb_AT1K0_GAS_VRC_120 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_130 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:130 '}
 fb_AT1K0_GAS_VRC_130 : FB_VRC;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VRC_140 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:VRC:140 '}
 fb_AT1K0_GAS_VRC_140 : FB_VRC;
 
 // FB_MKS317
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_10 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:10 '}
 fb_AT1K0_GAS_GPI_10 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_20 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:20 '}
 fb_AT1K0_GAS_GPI_20 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_11 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:11 '}
 fb_AT1K0_GAS_GPI_11 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_30 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:30 '}
 fb_AT1K0_GAS_GPI_30 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_40 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:40 '}
 fb_AT1K0_GAS_GPI_40 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_50 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:50 '}
 fb_AT1K0_GAS_GPI_50 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_60 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:60 '}
 fb_AT1K0_GAS_GPI_60 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_61 '}
-fb_AT1K0_GAS_GPI_61 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_80 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:51 '}
+fb_AT1K0_GAS_GPI_51 : FB_MKS317;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:80 '}
 fb_AT1K0_GAS_GPI_80 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_90 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:90 '}
 fb_AT1K0_GAS_GPI_90 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_100 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:100 '}
 fb_AT1K0_GAS_GPI_100 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_110 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:110 '}
 fb_AT1K0_GAS_GPI_110 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_120 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:120 '}
 fb_AT1K0_GAS_GPI_120 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_130 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:130 '}
 fb_AT1K0_GAS_GPI_130 : FB_MKS317;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GPI_140 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:140 '}
 fb_AT1K0_GAS_GPI_140 : FB_MKS317;
 
 // FB_MKS422
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_10 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:10 '}
 fb_AT1K0_GAS_GCC_10 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_20 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:20 '}
 fb_AT1K0_GAS_GCC_20 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_30 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:30 '}
 fb_AT1K0_GAS_GCC_30 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_40 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:40 '}
 fb_AT1K0_GAS_GCC_40 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_50 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:50 '}
 fb_AT1K0_GAS_GCC_50 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_60 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:60 '}
 fb_AT1K0_GAS_GCC_60 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_80 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:80 '}
 fb_AT1K0_GAS_GCC_80 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_90 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:90 '}
 fb_AT1K0_GAS_GCC_90 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_100 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:100 '}
 fb_AT1K0_GAS_GCC_100 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_110 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:110 '}
 fb_AT1K0_GAS_GCC_110 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_120 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:120 '}
 fb_AT1K0_GAS_GCC_120 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_130 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:130 '}
 fb_AT1K0_GAS_GCC_130 : FB_MKS422;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_GCC_140 '}
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GCC:140 '}
 fb_AT1K0_GAS_GCC_140 : FB_MKS422;
 
 // FB_EbaraDryPump
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PFM_01 '}
-fb_AT1K0_GAS_PFM_01 : FB_EbaraDryPump;
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_PFM_60 '}
-fb_AT1K0_GAS_PFM_60 : FB_EbaraDryPump;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PMF:10 '}
+fb_AT1K0_GAS_PMF_10 : FB_EbaraDryPump;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PMF:60 '}
+fb_AT1K0_GAS_PMF_60 : FB_EbaraDryPump;
 
-// FB_VCC
+// FB_PTM_Ebara_011M
 
-{attribute 'pytmc' := ' pv: fb_AT1K0_GAS_VVC_70 '}
-fb_AT1K0_GAS_VVC_70 : FB_VCC;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:110 '}
+fb_AT1K0_GAS_PTM_110 : FB_PTM_Ebara_011M;
 
 END_VAR
 ]]></Declaration>

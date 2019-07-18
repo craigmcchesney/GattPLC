@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <GVL Name="GVL_GATT" Id="{cc763021-1f5a-4b68-b361-4646c17f9fa7}">
+    <Declaration><![CDATA[VAR_GLOBAL
+
+
+// ST_Volume
+
+st_AT1K0_GAS_VRC_10_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_PTM_10_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_GATT : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_20_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_30_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_40_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_50_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VGP_80_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_BypassLine2 : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_BypassLine1 : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_100_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_110_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_PTM_120_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_120_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_130_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_PTM_140_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+st_AT1K0_GAS_VRC_140_VOL : ST_Volume := (rVolume := 1E3, rPressure := Global_Pressure, rVLeak := Global_Leak);
+
+// ST_MechPump
+
+st_AT1K0_GAS_PTM_10 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_20 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PMF_10 : ST_MechPump := (rMRE:=10, rBasePress:=1E-3);
+st_AT1K0_GAS_PTM_30 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_40 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PMF_60 : ST_MechPump := (rMRE:=10, rBasePress:=1E-3);
+st_AT1K0_GAS_PTM_80 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_110 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_120 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_130 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+st_AT1K0_GAS_PTM_140 : ST_MechPump := (iMaxSpd:=1000, rBasePress:=1E-9, rMaxLoad:=0.95);
+
+// FB_TurboPump
+
+fb_AT1K0_GAS_PTM_10 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_20 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_30 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_40 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_80 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_110 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_120 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_130 : FB_TurboPump;
+fb_AT1K0_GAS_PTM_140 : FB_TurboPump;
+
+// ST_VacuumValve
+
+st_AT1K0_GAS_VRC_10 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_20 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_30 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_40 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_50 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_60 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_90 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_100 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_110 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_120 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_130 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+st_AT1K0_GAS_VRC_140 : ST_VacuumValve := (q_xClsLS := TRUE, q_xOpnLS := FALSE);
+
+// FB_VacuumValve
+
+fb_AT1K0_GAS_VRC_10 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_20 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_30 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_40 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_50 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_60 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_90 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_100 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_110 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_120 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_130 : FB_VacuumValve;
+fb_AT1K0_GAS_VRC_140 : FB_VacuumValve;
+
+// ST_MKS_275
+
+st_AT1K0_GAS_GPI_10 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_20 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_11 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_30 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_40 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_50 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_60 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_51 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_80 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_90 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_100 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_FEES_GATT_GPI_111 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_110 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_121 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_120 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_130 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_141 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GPI_140 : ST_MKS_275 := (q_xGaugeConnected := TRUE);
+
+// FB_MKS_275
+
+fb_AT1K0_GAS_GPI_10 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_20 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_11 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_30 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_40 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_50 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_60 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_51 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_80 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_90 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_100 : FB_MKS_275;
+fb_FEES_GATT_GPI_111 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_110 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_121 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_120 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_130 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_141 : FB_MKS_275;
+fb_AT1K0_GAS_GPI_140 : FB_MKS_275;
+
+// ST_MKS_422
+
+st_AT1K0_GAS_GCC_10 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_20 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_30 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_40 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_50 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_60 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_80 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_90 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_100 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_110 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_120 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_130 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+st_AT1K0_GAS_GCC_140 : ST_MKS_422 := (q_xGaugeConnected := TRUE);
+
+// FB_MKS_422
+
+fb_AT1K0_GAS_GCC_10 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_20 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_30 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_40 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_50 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_60 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_80 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_90 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_100 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_110 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_120 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_130 : FB_MKS_422;
+fb_AT1K0_GAS_GCC_140 : FB_MKS_422;
+
+// FB_RoughPump
+
+fb_AT1K0_GAS_PMF_10 : FB_RoughPump;
+fb_AT1K0_GAS_PMF_60 : FB_RoughPump;
+
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>
