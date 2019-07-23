@@ -6,8 +6,8 @@
 
 // MKS275 Gauges
 
-{attribute 'pytmc' := ' pv: FEES:GATT:GPI:111 '}
-fb_FEES_GATT_GPI_111 : FB_MKS275;
+{attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:111 '}
+fb_AT1K0_GAS_GPI_111 : FB_MKS275;
 {attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:121 '}
 fb_AT1K0_GAS_GPI_121 : FB_MKS275;
 {attribute 'pytmc' := ' pv: AT1K0:GAS:GPI:141 '}
@@ -23,8 +23,6 @@ fb_AT1K0_GAS_PTM_20 : FB_PTM_Ebara_010M;
 fb_AT1K0_GAS_PTM_30 : FB_PTM_Ebara_010M;
 {attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:40 '}
 fb_AT1K0_GAS_PTM_40 : FB_PTM_Ebara_010M;
-{attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:80 '}
-fb_AT1K0_GAS_PTM_80 : FB_PTM_Ebara_010M;
 {attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:120 '}
 fb_AT1K0_GAS_PTM_120 : FB_PTM_Ebara_010M;
 {attribute 'pytmc' := ' pv: AT1K0:GAS:PTM:130 '}

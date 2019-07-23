@@ -13,7 +13,6 @@ fb_AT1K0_GAS_PTM_10(stVlInlet := st_AT1K0_GAS_VRC_10_VOL, stVlOutlet := st_AT1K0
 fb_AT1K0_GAS_PTM_20(stVlInlet := st_AT1K0_GAS_VRC_20_VOL, stVlOutlet := st_AT1K0_GAS_PTM_10_VOL, stPump := st_AT1K0_GAS_PTM_20);
 fb_AT1K0_GAS_PTM_30(stVlInlet := st_AT1K0_GAS_VRC_30_VOL, stVlOutlet := st_AT1K0_GAS_PTM_10_VOL, stPump := st_AT1K0_GAS_PTM_30);
 fb_AT1K0_GAS_PTM_40(stVlInlet := st_AT1K0_GAS_VRC_40_VOL, stVlOutlet := st_AT1K0_GAS_PTM_10_VOL, stPump := st_AT1K0_GAS_PTM_40);
-fb_AT1K0_GAS_PTM_80(stVlInlet := st_AT1K0_GAS_VGP_80_VOL, stVlOutlet := st_BypassLine2, stPump := st_AT1K0_GAS_PTM_80);
 fb_AT1K0_GAS_PTM_110(stVlInlet := st_AT1K0_GAS_VRC_110_VOL, stVlOutlet := st_BypassLine2, stPump := st_AT1K0_GAS_PTM_110);
 fb_AT1K0_GAS_PTM_120(stVlInlet := st_AT1K0_GAS_VRC_120_VOL, stVlOutlet := st_AT1K0_GAS_PTM_120_VOL, stPump := st_AT1K0_GAS_PTM_120);
 fb_AT1K0_GAS_PTM_130(stVlInlet := st_AT1K0_GAS_VRC_130_VOL, stVlOutlet := st_AT1K0_GAS_PTM_120_VOL, stPump := st_AT1K0_GAS_PTM_130);
@@ -47,7 +46,7 @@ fb_AT1K0_GAS_GPI_51(stVolume := st_AT1K0_GAS_VRC_50_VOL, stGauge := st_AT1K0_GAS
 fb_AT1K0_GAS_GPI_80(stVolume := st_GATT, stGauge := st_AT1K0_GAS_GPI_80);
 fb_AT1K0_GAS_GPI_90(stVolume := st_GATT, stGauge := st_AT1K0_GAS_GPI_90);
 fb_AT1K0_GAS_GPI_100(stVolume := st_GATT, stGauge := st_AT1K0_GAS_GPI_100);
-fb_FEES_GATT_GPI_111(stVolume := st_BypassLine2, stGauge := st_FEES_GATT_GPI_111);
+fb_AT1K0_GAS_GPI_111(stVolume := st_BypassLine2, stGauge := st_AT1K0_GAS_GPI_111);
 fb_AT1K0_GAS_GPI_110(stVolume := st_GATT, stGauge := st_AT1K0_GAS_GPI_110);
 fb_AT1K0_GAS_GPI_121(stVolume := st_AT1K0_GAS_PTM_120_VOL, stGauge := st_AT1K0_GAS_GPI_121);
 fb_AT1K0_GAS_GPI_120(stVolume := st_GATT, stGauge := st_AT1K0_GAS_GPI_120);
@@ -78,7 +77,8 @@ fb_AT1K0_GAS_PMF_60(stVolInlet := st_AT1K0_GAS_VRC_50_VOL, stPump := st_AT1K0_GA
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GATT">
-      <LineId Id="6" Count="68" />
+      <LineId Id="6" Count="6" />
+      <LineId Id="14" Count="60" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

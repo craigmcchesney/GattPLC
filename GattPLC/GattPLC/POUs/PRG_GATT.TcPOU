@@ -9,7 +9,7 @@ END_VAR
       <ST><![CDATA[
 // MKS275 Gauges
 
-fb_FEES_GATT_GPI_111(PG=>);
+fb_AT1K0_GAS_GPI_111(PG=>);
 fb_AT1K0_GAS_GPI_121(PG=>);
 fb_AT1K0_GAS_GPI_141(PG=>);
 
@@ -19,7 +19,6 @@ fb_AT1K0_GAS_PTM_10(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_20(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_30(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_40(i_xExtILKOk := TRUE);
-fb_AT1K0_GAS_PTM_80(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_120(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_130(i_xExtILKOk := TRUE);
 fb_AT1K0_GAS_PTM_140(i_xExtILKOk := TRUE);
@@ -84,7 +83,8 @@ fb_AT1K0_GAS_PTM_110(i_xExtILKOk := TRUE);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GATT">
-      <LineId Id="89" Count="74" />
+      <LineId Id="89" Count="12" />
+      <LineId Id="103" Count="60" />
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

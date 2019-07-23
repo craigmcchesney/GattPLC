@@ -57,7 +57,7 @@
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GATT.fb_FEES_GATT_GPI_111.i_iPRESS_R</Name>
+							<Name>GVL_GATT.fb_AT1K0_GAS_GPI_111.i_iPRESS_R</Name>
 							<Comment>
 								<![CDATA[ input Pressure // Link to analog Input]]>
 							</Comment>
@@ -276,57 +276,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_40.i_iCurrentMon</Name>
-							<Comment>
-								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xDecel</Name>
-							<Comment>
-								<![CDATA[Link to brake input]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAccel</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xRotate</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xNCFault</Name>
-							<Comment>
-								<![CDATA[ remove?]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAtSpd</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iRawSpeed</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_xAlarm</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iTempMon</Name>
-							<Comment>
-								<![CDATA[ Link to Analog input -- input Voltage according to the pump temprature 0->5V 0->100C]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.i_iCurrentMon</Name>
 							<Comment>
 								<![CDATA[Link to Analog -- input Voltage to the output current of motor 0->5V 0->10A]]>
 							</Comment>
@@ -1052,39 +1001,6 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xStart</Name>
-							<Comment>
-								<![CDATA[ link to output]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xStop</Name>
-							<Comment>
-								<![CDATA[Link to output]]>
-							</Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xReset</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xProtection</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_xSetSpeed</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_80.q_iSpeedSet</Name>
-							<Comment>
-								<![CDATA[Link to analog Output]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GATT.fb_AT1K0_GAS_PTM_120.q_xStart</Name>
 							<Comment>
 								<![CDATA[ link to output]]>
@@ -1390,7 +1306,7 @@
 				</Instance>
 			</Project>
 			<Project GUID="{C6755E69-3A11-4CB4-A5D8-B4FFEFE828A4}" Name="GattSim" PrjFilePath="GattSim\GattSim.plcproj" TmcFilePath="GattSim\GattSim.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="GattSim\GattSim.tmc">
 					<Name>GattSim Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -1823,13 +1739,6 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_GATT.st_FEES_GATT_GPI_111.q_iRawPress</Name>
-							<Comment>
-								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
-							</Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL_GATT.st_AT1K0_GAS_GPI_110.q_iRawPress</Name>
 							<Comment>
 								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
@@ -1957,6 +1866,13 @@
 						</Var>
 						<Var>
 							<Name>GVL_GATT.st_AT1K0_GAS_GCC_140.q_iRawPress</Name>
+							<Comment>
+								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_GATT.st_AT1K0_GAS_GPI_111.q_iRawPress</Name>
 							<Comment>
 								<![CDATA[ The transformed integer from real pressure to an integer encoded signal to be passed to the PLC ]]>
 							</Comment>
